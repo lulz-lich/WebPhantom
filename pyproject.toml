@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "webphantom"
+version = "1.0.0"
+description = "Headless browser security automation toolkit for authorized web assessment documentation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Security Portfolio Project" }]
+maintainers = [{ name = "lulz-lich" }]
+keywords = ["security", "red-team", "playwright", "browser-automation", "reconnaissance", "opsec"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Intended Audience :: Information Technology",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Security",
+]
+dependencies = [
+  "playwright>=1.44.0",
+  "typer>=0.12.0",
+  "rich>=13.7.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/lulz-lich/webphantom"
+Repository = "https://github.com/lulz-lich/webphantom"
+Issues = "https://github.com/lulz-lich/webphantom/issues"
+Documentation = "https://github.com/lulz-lich/webphantom/tree/main/docs"
+
+[project.scripts]
+webphantom = "webphantom.cli.app:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2.0",
+  "pytest>=8.0.0",
+  "ruff>=0.8.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]

@@ -1,0 +1,10 @@
+{
+  "max_pages": 4,
+  "allow_external": false,
+  "timeout": 15000,
+  "viewport": "1440x900",
+  "user_agent": "WebPhantom-AuthorizedAssessment/0.1",
+  "wait_until": "networkidle",
+  "full_page": true,
+  "capture_har": false
+}
