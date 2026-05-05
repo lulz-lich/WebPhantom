@@ -45,7 +45,7 @@ where = ["src"]
 dev = [
   "build>=1.2.0",
   "pytest>=8.0.0",
-  "ruff>=0.8.0",
+  "ruff>=0.15.12",
 ]
 
 [tool.pytest.ini_options]

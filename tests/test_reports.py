@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from webphantom.models import PageSnapshot, ScanResult
 from webphantom.reports.markdown import render_markdown
 
